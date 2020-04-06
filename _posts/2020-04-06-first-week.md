@@ -16,4 +16,4 @@ Outside of bootcamp, but data related, I've been following COVID-19. I'm not rea
 
 The projections are quite interesting, especially when performed on a state level. The NYT's Daily podcast had a nice overview on the shortage of hospital resources (e.g. beds, ventilators, N95 face masks) that complements the data and explains the policies (some with roots in the 1970s) behind some of these shortages. The latter website is simple, but has a nice, interactive UI and gets me some quick Chicago data.
 
-Stay safe everyone! Our bootcamp is online for the foreseeable future, so we'll be doing our part! :school: :house_with_garden:
+Stay safe everyone! Our bootcamp is online for the foreseeable future, so we'll be doing our part!
