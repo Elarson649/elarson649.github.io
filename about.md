@@ -3,28 +3,10 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+Hi there! My name is Eric Larson and I am a data science student! After working at Epic for 5.5 years, travelling for a few months, and learning a bit of data science on my own, I'm part of the Metis Chicago/Online Spring 2020 cohort!
 
-In the novel, *The Strange Case of Dr. Jekyll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+On this blog, I'll be documenting my experiences in Metis, including useful things I've learned, tip and tricks, project ideas, and hopefully, some completed projects.
 
-There are currently two themes built on Poole:
+If you want to get in touch with me, e-mail me at [elarson649@gmail.com](mailto:elarson649@gmail.com) or contact me on [LinkedIn](https://www.linkedin.com/in/eric-larson-26533687/).
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+Thanks for reading! :bowtie:
