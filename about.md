@@ -10,3 +10,5 @@ On this blog, I'll be documenting my experiences in Metis, including useful thin
 If you want to get in touch with me, e-mail me at [elarson649@gmail.com](mailto:elarson649@gmail.com) or contact me on [LinkedIn](https://www.linkedin.com/in/eric-larson-26533687/).
 
 Thanks for reading!
+
+![Image test]({{ site.url }}/images/me_in_bryce.jpeg)
