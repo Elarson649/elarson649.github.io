@@ -27,7 +27,7 @@ I really wanted to leverage some of the **NLP (natural language processing)** te
 ![Image test]({{ site.url }}/images/Macygray-itry.jpg 'I Try (to make good features for modeling!)')
 
 
-I also wanted to c**ompare the potential one-hit wonders to the music landscape at the time of the song's release**. To avoid data leakage, I compared each one hit wonder to the previous year's top 100 songs via the Billboard year-end charts. These year-end charts are based off a song's position and longevity on the weekly charts from the entire year. I used a [dataset](https://github.com/walkerkq/musiclyrics) that already had the lyrics of the top songs. After adding in audio features and genres via Spotify's API, I developed three metrics to measure how similar a song was to other music popular at the time!
+I also wanted to **compare the potential one-hit wonders to the music landscape at the time of the song's release**. To avoid data leakage, I compared each one hit wonder to the previous year's top 100 songs via the Billboard year-end charts. These year-end charts are based off a song's position and longevity on the weekly charts from the entire year. I used a [dataset](https://github.com/walkerkq/musiclyrics) that already had the lyrics of the top songs. After adding in audio features and genres via Spotify's API, I developed three metrics to measure how similar a song was to other music popular at the time!
 
  * **Genre score**, or genre popularity. This is defined as a count of how many songs' artists from the year-end chart from the prior year had the same genre as the one-hit wonder's artist (e.g. the potential one hit wonder was country and 15 songs on the prior year's year-end charts were country, so the genre score is 15 points). I only looked at the genre with the highest score if the song's artist had multiple genres. 
 
@@ -37,7 +37,11 @@ I also wanted to c**ompare the potential one-hit wonders to the music landscape 
 
 Modeling
 ---------------------
-Now, it's time for the most satisfying part of the data science process- modeling! Throughout this process, I tried a bunch of classification models: logistic regression with lasso and/or ridge regularization, linear SVM, random forests, KNN, XGBoost, and a neural network with 2 hidden layers. 
+Now, it's time for the most satisfying part of the data science process- modeling! 
+
+![Image test]({{ site.url }}/images/rupaul.jpg 'This is what I imagine scikit-learn looks like')
+
+Throughout this process, I tried a bunch of classification models: logistic regression with lasso and/or ridge regularization, linear SVM, random forests, KNN, XGBoost, and a neural network with 2 hidden layers. 
 
 Optimizing the F-score, **the neural network worked best** (see scores from the test set below). All of the linear models also performed strongly. I then dove into finding out the ingredients of a one-hit wonder, or, in data science term, feature importance. For this, I used the logistic regression.
 
@@ -51,16 +55,16 @@ Optimizing the F-score, **the neural network worked best** (see scores from the 
 
 Results
 ---------------------
-And the moment you've all been waiting for- the ingredients of a one-hit wonder! Below are the most important and statistically significant features that **increase the song's probability of being a one-hit wonder!**
+And the moment you've all been waiting for :drum:- the ingredients of a one-hit wonder! Below are the most important and statistically significant features that **increase the song's probability of being a one-hit wonder!**
 
-* **If an artist is featured on the song!** I think this is pretty intuitive- if there's a featured artist, it's more difficult to say who drove the song's success.
-  * As an example, think of American Boy by Estelle ft. Kanye West or Latch by Disclosure ft. Sam Smith!
-
-* **Relatively poor performance on the Billboard weekly charts.** This finding is also quite intuitive; if a song's peak position is closer to 40 than 1 and the song wasn't on the weekly charts for a long period of time, it's more likely going to be a one-hit wonder. 
+* **Relatively poor performance on the Billboard weekly charts.** This finding is quite intuitive; if a song's peak position is closer to 40 than 1 and the song wasn't on the weekly charts for a long period of time, it's more likely going to be a one-hit wonder. 
   * Let's look at How You Remind Me by Nickelback! The song was on the weekly charts for 49 weeks and peaked at number one, decreasing the Nickelback's chance of being a one-hit wonder. 
   * On the other hand, let's look at Irish girl group B Witched and their surprisingly racy first single C'est L Vie (I hadn't heard the song since 1999- the things I can pick up on now :astonished:). The song peaked at number 9, but was only on the chart for 15 weeks- for a top ten song, this is a pretty short stay on the charts, so the song was more likely to be a one-hit wonder.
 
 ![Image test]({{ site.url }}/images/cestlavie.jpg "C'est La Vie")
+
+* **If an artist is featured on the song!** I think this is also intuitive- if there's a featured artist, it's more difficult to say who drove the song's success.
+  * As an example, think of American Boy by Estelle ft. Kanye West or Latch by Disclosure ft. Sam Smith!
 
 * **If the lyrics are similar to other popular songs at the time.** This was a surprising finding to me- when I think of one-hit wonders, I think of songs with odd lyrics (e.g. The Macarena, I'm Too Sexy, Barbie Girl, etc). These songs may be the exception, but in general, the more unorthodox the lyrics, the lower chance a song is going to be a one-hit wonder. 
   * An example of a song that had a low lyric distance score (aka it was similar to other songs released at the time) is [What Is Love by Haddaway](https://genius.com/Haddaway-what-is-love-lyrics). If you look at the lyrics, you can see they're a bit generic (but undeniably catchy).
