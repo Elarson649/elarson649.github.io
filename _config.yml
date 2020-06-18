@@ -2,8 +2,8 @@
 permalink:           pretty
 
 # Setup
-title:               Proof That I'm Right and You're Wrong
-tagline:             A Definitive Data Science Blog
+title:               Proof That I'm Right- A Definitive Data Science Blog
+tagline:             By Eric Larson
 url:                 http://elarson649.github.io/
 paginate:            2
 baseurl:             ""
@@ -36,3 +36,6 @@ pages_list:
   About: '/about'
   Archive: '/archive'
   Feed: '/index.html'
+
+plugins:
+  - jemoji
