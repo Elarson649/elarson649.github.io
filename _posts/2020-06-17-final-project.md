@@ -55,13 +55,13 @@ Optimizing the F-score, **the neural network worked best** (see scores from the 
 
 Results
 ---------------------
-And the moment you've all been waiting for :drum:- the ingredients of a one-hit wonder! Below are the most important and statistically significant features that **increase the song's probability of being a one-hit wonder!**
+And the moment you've all been waiting for- the ingredients of a one-hit wonder! Below are the most important and statistically significant features that **increase the song's probability of being a one-hit wonder!**
 
 * **Relatively poor performance on the Billboard weekly charts.** This finding is quite intuitive; if a song's peak position is closer to 40 than 1 and the song wasn't on the weekly charts for a long period of time, it's more likely going to be a one-hit wonder. 
   * Let's look at How You Remind Me by Nickelback! The song was on the weekly charts for 49 weeks and peaked at number one, decreasing the Nickelback's chance of being a one-hit wonder. 
-  * On the other hand, let's look at Irish girl group B Witched and their surprisingly racy first single C'est L Vie (I hadn't heard the song since 1999- the things I can pick up on now :astonished:). The song peaked at number 9, but was only on the chart for 15 weeks- for a top ten song, this is a pretty short stay on the charts, so the song was more likely to be a one-hit wonder.
+  * On the other hand, let's look at Irish girl group B Witched and their surprisingly racy first single C'est L Vie (I hadn't heard the song since 1999- the things I can pick up on now!). The song peaked at number 9, but was only on the chart for 15 weeks- for a top ten song, this is a pretty short stay on the charts, so the song was more likely to be a one-hit wonder.
 
-![Image test]({{ site.url }}/images/cestlavie.jpg "C'est La Vie")
+![Image test]({{ site.url }}/images/bwitched2.jpg "C'est La Vie")
 
 * **If an artist is featured on the song!** I think this is also intuitive- if there's a featured artist, it's more difficult to say who drove the song's success.
   * As an example, think of American Boy by Estelle ft. Kanye West or Latch by Disclosure ft. Sam Smith!
