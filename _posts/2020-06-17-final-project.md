@@ -13,6 +13,11 @@ Since the beginning of Metis, I knew I wanted to do some sort of project with mu
 ![Image test]({{ site.url }}/images/ketchupgif.gif 'The Ketchup Song')
 [The Ketchup Song!](https://www.youtube.com/watch?v=AMT698ArSfQ)
 
+<p align="center">
+  <img src="
+![Image test]({{ site.url }}/images/ketchupgif.gif">
+</p>
+
 For this project, I defined a one-hit wonder as an artist who only had **one song reach the Billboard top 40**. This definition comes from one-hit wonder expert and music journalist Wayne Jancik, the author of The Billboard Book of One-Hit Wonders, and seems to be the most common definition used in music literature. With this definition and [a lovely dataset](https://data.world/kcmillersean/billboard-hot-100-1958-2017) of the Billboard weekly Hot 100, I was off to the races! 
 
 
