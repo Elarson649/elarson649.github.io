@@ -95,7 +95,7 @@ And the moment you've all been waiting for: the ingredients of a one-hit wonder!
 * **Lastly, some genres were more likely to be one-hit wonders than others!** Artists categorized as R&B a relatively higher chance of being a one-hit wonder, while Country and Hip Hop artists were the least likely to be one-hit wonders.
 
 <p align="center">
-  <img src="https://elarson649.github.io/images/cassie.jpg alt='2006 R&B one-hit wonder Me & U by Cassie">
+  <img src="https://elarson649.github.io/images/cassie.jpg" alt='2006 R&B one-hit wonder Me & U by Cassie'>
 </p>
 
 Farewell!
