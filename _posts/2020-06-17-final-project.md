@@ -10,11 +10,9 @@ For my last project, I explored the science behind one-hit wonders, or artists w
 
 Since the beginning of Metis, I knew I wanted to do some sort of project with music and use the [Spotify API](https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/), which provides numerical representations of the audio qualities of any song on Spotify (e.g. how danceable it is, the tempo, its loudness). As a pop music enthusiast, I was particularly interested in one-hit wonders because the phenomenon seemed pretty random! With the help of natural language processing and classification techniques, I wanted to see whether I could show if one-hit wonders weren't a completely random phenomenon and figure out their ingredients.
 
-![Image test]({{ site.url }}/images/ketchupgif.gif 'The Ketchup Song')
-[The Ketchup Song!](https://www.youtube.com/watch?v=AMT698ArSfQ)
-
 <p align="center">
   <img src="https://elarson649.github.io/images/ketchupgif.gif">
+  <a href="https://www.youtube.com/watch?v=AMT698ArSfQ">The Ketchup Song!</a>
 </p>
 
 For this project, I defined a one-hit wonder as an artist who only had **one song reach the Billboard top 40**. This definition comes from one-hit wonder expert and music journalist Wayne Jancik, the author of The Billboard Book of One-Hit Wonders, and seems to be the most common definition used in music literature. With this definition and [a lovely dataset](https://data.world/kcmillersean/billboard-hot-100-1958-2017) of the Billboard weekly Hot 100, I was off to the races! 
@@ -29,7 +27,9 @@ After performing some data validation, we had **1500 songs in our dataset, 48% o
 
 I really wanted to incorporate some of the **natural language processing** techniques I picked up at Metis, so I performed some feature engineering around the lyrics of songs. I used VADER to perform sentiment analysis, leveraged spaCy for named entity recognition (e.g. is the song using more specific language as opposed to more vague language or cliches), measured the reading difficulty of the lyrics using the Flesch Reading Ease, and quantified the variety of words in the lyrics through a custom metric.
 
-![Image test]({{ site.url }}/images/Macygray-itry.jpg 'I Try (to make good features for modeling!)')
+<p align="center">
+  <img src="https://elarson649.github.io/images/Macygray-itry.jpg" alt='I Try (to make good features for my model!'>
+</p>
 
 
 I also wanted to **compare the potential one-hit wonders to the music landscape at the time of the song's release**. To avoid data leakage, I compared each one hit wonder to the previous year's top 100 songs via the Billboard year-end charts. These year-end charts are based off a song's position and longevity on the weekly charts from the entire year. I used a [dataset](https://github.com/walkerkq/musiclyrics) that already had the lyrics of the top songs. After adding in audio features and genres via Spotify's API, I developed three metrics to measure how similar a song was to other music popular at the time!
@@ -44,7 +44,9 @@ Modeling
 ---------------------
 Now, it's time for the most satisfying part of the data science process- modeling! 
 
-![Image test]({{ site.url }}/images/rupaul.jpg 'This is what I imagine scikit-learn looks like')
+<p align="center">
+  <img src="https://elarson649.github.io/images/rupaul.jpg" alt='This is what I imagine sci-kit learn looks like'>
+</p>
 
 Throughout this process, I tried a bunch of classification models: logistic regression with lasso and/or ridge regularization, linear SVM, random forests, KNN, XGBoost, and a neural network with 2 hidden layers. 
 
@@ -66,7 +68,9 @@ And the moment you've all been waiting for: the ingredients of a one-hit wonder!
   * Let's look at How You Remind Me by Nickelback! The song was on the weekly charts for 49 weeks and peaked at number one, decreasing the Nickelback's chance of being a one-hit wonder. 
   * On the other hand, let's look at Irish girl group B Witched and their surprisingly racy first single C'est La Vie (I hadn't heard the song since 1999- the things I can pick up on now!). The song peaked at number 9, but was only on the chart for 15 weeks; for a top ten song, this is a pretty short stay on the charts, so the song was more likely to be a one-hit wonder.
 
-![Image test]({{ site.url }}/images/bwitched2.jpg "C'est La Vie")
+<p align="center">
+  <img src="https://elarson649.github.io/images/bwitched2.jpg">
+</p>
 
 * **If an artist is featured on the song!** I think this is also intuitive- if there's a featured artist, it's more difficult to say who drove the song's success.
   * As an example, think of American Boy by Estelle ft. Kanye West or Latch by Disclosure ft. Sam Smith!
@@ -74,7 +78,9 @@ And the moment you've all been waiting for: the ingredients of a one-hit wonder!
 * **If the lyrics are similar to other popular songs at the time.** This was a surprising finding to me! When I think of one-hit wonders, I think of songs with odd lyrics (e.g. The Macarena, I'm Too Sexy, Barbie Girl, etc). These songs may be the exception, but in general, the more unorthodox the lyrics, the lower chance a song is going to be a one-hit wonder. 
   * An example of a song that had a low lyric distance score (aka it was similar to other songs released at the time) is [What Is Love by Haddaway](https://genius.com/Haddaway-what-is-love-lyrics). If you look at the lyrics, you can see they're a bit generic (but undeniably catchy).
 
-![Image test]({{ site.url }}/images/roxbury.gif)
+<p align="center">
+  <img src="https://elarson649.github.io/images/roxbury.gif">
+</p>
 
 * **If the genre of the artist isn't popular at the song's time of release.**
   * Let's look at Ho Hey by The Lumineers. Released in 2012, The Lumineers are a folk/rock group. Only two songs' artists in 2011's year-end top 100 songs had these genres, increasing the song's probability of being a one-hit wonder!
@@ -82,20 +88,27 @@ And the moment you've all been waiting for: the ingredients of a one-hit wonder!
 
 * **If the song was released in the 2010s.** My initial thought on this had to do with the shift in how we consume music over the past 20 years, from radio and CDs, to digital purchases, and, finally, to streaming. In addition, Billboard has been tweaking how they count streams in their rankings throughout the 2010s! My hypothesis is that all these changes have contributed to one-hit wonders being more likely in the 2010s, but I have to do a bit more research!
 
-![Image test]({{ site.url }}/images/latoya.gif "Me (as LaToya Jackson) getting to the root of the 2010s increase in one-hit wonders!")
+<p align="center">
+  <img src="https://elarson649.github.io/images/latoya.gif" alt='Me (as LaToya Jackson) investigating the 2010s!'>
+</p>
 
 * **Lastly, some genres were more likely to be one-hit wonders than others!** Artists categorized as R&B a relatively higher chance of being a one-hit wonder, while Country and Hip Hop artists were the least likely to be one-hit wonders.
 
-![Image test]({{ site.url }}/images/cassie.jpg "Cassie's 2006 R&B One-Hit Wonder, Me & U")
+<p align="center">
+  <img src="https://elarson649.github.io/images/cassie.jpg alt='2006 R&B one-hit wonder Me & U by Cassie">
+</p>
 
 Farewell!
 ---------------------
 I hope you enjoyed my analysis, and the next time you ponder why that artist you loved from a few years ago hasn't had much success lately, consider these findings! Finally, I'll leave you with some of my favorite one-hit wonders :dancer:
 
-![Image test]({{ site.url }}/images/groove.png)
-[Groove is In The Heart by Deee-Lite](https://www.youtube.com/watch?v=etviGf1uWlg)
+<p align="center">
+  <img src="https://elarson649.github.io/images/groove.png">
+  <a href="https://www.youtube.com/watch?v=etviGf1uWlg">Groove is In The Heart by Deee-Lite</a>
+</p>
 
-
-![Image test]({{ site.url }}/images/tweet.png)
-[Oops (Oh My) by Tweet ft Missy Elliott](https://www.youtube.com/watch?v=Hb37Nh_Sg4g)
+<p align="center">
+  <img src="https://elarson649.github.io/images/tweet.png">
+  <a href="https://www.youtube.com/watch?v=Hb37Nh_Sg4g">Oops (Oh My) by Tweet ft Missy Elliott</a>
+</p>
 
