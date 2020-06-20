@@ -3,6 +3,7 @@ layout: post
 title: The Science of One-Hit Wonders!
 ---
 
+[See the one-hit wonder repo for the code and slides for this project!](https://github.com/Elarson649/one_hit_wonder)
 
 The Question
 ---------------------
